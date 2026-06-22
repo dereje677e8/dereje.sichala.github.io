@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dereje Sichala | Senior Cloud & DevOps Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="custom-cursor" id="customCursor"></div>
+    <div class="custom-cursor-glow" id="cursorGlow"></div>
+
+    <div class="ambient-glow-layer">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <nav class="floating-dock">
+        <a href="#hero" class="dock-item active" data-tooltip="Home">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </a>
+        <a href="#about" class="dock-item" data-tooltip="About">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        </a>
+        <a href="#expertise" class="dock-item" data-tooltip="Skills">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.1z"/></svg>
+        </a>
+        <a href="#projects" class="dock-item" data-tooltip="Projects">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z"/></svg>
+        </a>
+        <a href="#ai-dashboard" class="dock-item" data-tooltip="Dashboard">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+        </a>
+        <a href="#contact" class="dock-item" data-tooltip="Contact">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <button class="terminal-toggle-btn" id="terminalToggle" title="Toggle Developer Shell">
+            <svg viewBox="0 0 24 24" width="20" height="20"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41zM12 18h8v2h-8z"/></svg>
+        </button>
+    </nav>
+
+    <main class="smooth-scroll-container">
+
+        <!-- HERO -->
+        <section id="hero" class="hero-section layout-panel">
+            <div class="glass-card hero-card reveal">
+                <div class="badge-container">
+                    <span class="status-badge"><span class="pulse-dot"></span> Available for Opportunities</span>
+                </div>
+                <h1 class="hero-title">Dereje Sichala</h1>
+                <div class="role-carousel-container">
+                    <span class="role-text" id="roleText">Senior Cloud & DevOps Engineer</span>
+                </div>
+                <p class="hero-subtitle">Designing resilient cloud platforms, automating delivery pipelines, and building intelligent data infrastructure at enterprise scale.</p>
+                <div class="hero-cta-group">
+                    <a href="#projects" class="btn-primary liquid-btn"><span>View Projects</span></a>
+                    <a href="#contact" class="btn-secondary liquid-btn"><span>Get in Touch</span></a>
+                </div>
+            </div>
+            <div class="scroll-down-hint">
+                <span class="mouse-icon"><span class="mouse-wheel"></span></span>
+                <p>Scroll to explore</p>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="about-section layout-panel">
+            <div class="section-container">
+                <h2 class="section-title reveal">Background & Mission</h2>
+                <div class="about-grid">
+                    <div class="glass-card story-card reveal">
+                        <h3>Who I Am</h3>
+                        <p>A Senior Cloud & DevOps Engineer with a foundation in <strong>Electrical & Computer Engineering</strong>, I specialize in designing, implementing, and managing enterprise-grade cloud infrastructure, Kubernetes platforms, CI/CD pipelines, and cloud-native solutions.</p>
+                        <p>My work spans Azure Cloud, container orchestration, infrastructure automation, data engineering, and platform operations — with a passion for turning complexity into reliable, scalable systems.</p>
+                    </div>
+                    
+                    <div class="glass-card core-pillars-card reveal">
+                        <h3>Engineering Principles</h3>
+                        <div class="pillar-item">
+                            <span class="pillar-icon">⚡</span>
+                            <div>
+                                <h4>Automation First</h4>
+                                <p>Treating infrastructure as code to eliminate toil and enforce consistency across every environment.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-icon">🛡️</span>
+                            <div>
+                                <h4>Security by Design</h4>
+                                <p>Embedding DevSecOps practices — from container hardening to SSL management — at every layer of the stack.</p>
+                            </div>
+                        </div>
+                        <div class="pillar-item">
+                            <span class="pillar-icon">📊</span>
+                            <div>
+                                <h4>Observability Driven</h4>
+                                <p>Building platforms with Prometheus, Grafana, and ELK to ensure full visibility into system health and performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERTISE -->
+        <section id="expertise" class="expertise-section layout-panel">
+            <div class="section-container">
+                <h2 class="section-title reveal">Technical Stack</h2>
+                <p class="section-subtitle reveal">Core domains and technologies I work with across cloud, DevOps, and data engineering.</p>
+                
+                <div class="skills-mesh-container reveal">
+                    <div class="skills-glass-grid">
+                        <div class="skill-node-card" data-tier="cloud">
+                            <div class="node-glow"></div>
+                            <h4>Microsoft Azure</h4>
+                            <p>VMs, AKS, Networking, Storage</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="devops">
+                            <div class="node-glow"></div>
+                            <h4>Kubernetes & RKE2</h4>
+                            <p>HA Clusters, Helm, Container Security</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="devops">
+                            <div class="node-glow"></div>
+                            <h4>Azure DevOps & CI/CD</h4>
+                            <p>Pipelines, Git, Release Management</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="devops">
+                            <div class="node-glow"></div>
+                            <h4>Docker & Helm</h4>
+                            <p>Containerization & Package Management</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="linux">
+                            <div class="node-glow"></div>
+                            <h4>Linux Administration</h4>
+                            <p>Ubuntu, RHEL, SUSE, Oracle Linux</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="devops">
+                            <div class="node-glow"></div>
+                            <h4>Python & Bash</h4>
+                            <p>Automation & Scripting Frameworks</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="data">
+                            <div class="node-glow"></div>
+                            <h4>Apache Kafka</h4>
+                            <p>Streaming & Messaging Architectures</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="data">
+                            <div class="node-glow"></div>
+                            <h4>Data Engineering</h4>
+                            <p>ETL, PostgreSQL, MongoDB, BigQuery</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="monitoring">
+                            <div class="node-glow"></div>
+                            <h4>Prometheus & Grafana</h4>
+                            <p>Metrics, Dashboards, Alerting</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="virt">
+                            <div class="node-glow"></div>
+                            <h4>Nutanix & VMware</h4>
+                            <p>Enterprise Virtualization Platforms</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="data">
+                            <div class="node-glow"></div>
+                            <h4>Hadoop & HDFS</h4>
+                            <p>Distributed Data Processing</p>
+                        </div>
+                        <div class="skill-node-card" data-tier="web">
+                            <div class="node-glow"></div>
+                            <h4>REST APIs & Vue.js</h4>
+                            <p>API Integration & Web Development</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="projects-section layout-panel">
+            <div class="section-container">
+                <h2 class="section-title reveal">Project Highlights</h2>
+                <div class="projects-matrix">
+                    
+                    <div class="glass-card project-card reveal">
+                        <div class="project-header">
+                            <span class="project-category">Container Orchestration</span>
+                            <h3>Enterprise Kubernetes Platform</h3>
+                        </div>
+                        <p class="project-description">Designed and implemented highly available RKE2 Kubernetes clusters for enterprise workloads. Automated deployment and lifecycle management, integrated private container registries, certificate management, and end-to-end monitoring solutions.</p>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">RKE2</span>
+                            <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Helm</span>
+                            <span class="tech-tag">Prometheus</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-project-expand">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card project-card reveal">
+                        <div class="project-header">
+                            <span class="project-category">CI/CD & DevOps</span>
+                            <h3>Azure DevOps Transformation</h3>
+                        </div>
+                        <p class="project-description">Built end-to-end CI/CD pipelines using Azure DevOps, implementing automated build, test, and deployment workflows. Significantly reduced deployment times and improved release reliability across development and production environments.</p>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Azure DevOps</span>
+                            <span class="tech-tag">CI/CD</span>
+                            <span class="tech-tag">Git</span>
+                            <span class="tech-tag">IaC</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-project-expand">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card project-card reveal">
+                        <div class="project-header">
+                            <span class="project-category">Data Engineering</span>
+                            <h3>Cloud Data Integration Platform</h3>
+                        </div>
+                        <p class="project-description">Built scalable ETL workflows and data movement pipelines integrating multiple sources via REST APIs and database technologies. Delivered reporting and analytics solutions using PostgreSQL, MongoDB, and BigQuery on cloud infrastructure.</p>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">ETL</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">BigQuery</span>
+                            <span class="tech-tag">REST APIs</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-project-expand">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="glass-card project-card reveal">
+                        <div class="project-header">
+                            <span class="project-category">Infrastructure Automation</span>
+                            <h3>Infrastructure Automation Initiative</h3>
+                        </div>
+                        <p class="project-description">Developed Python and Bash automation scripts to handle server provisioning, certificate renewal, and routine operational tasks. Reduced manual intervention across the platform, improving operational efficiency and system reliability at scale.</p>
+                        <div class="tech-tag-group">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Azure</span>
+                            <span class="tech-tag">SSL Automation</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn-project-expand">View Details</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline" class="timeline-section layout-panel">
+            <div class="section-container">
+                <h2 class="section-title reveal">Career Timeline</h2>
+                <div class="interactive-timeline">
+                    <div class="timeline-line"></div>
+                    
+                    <div class="timeline-event reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <span class="event-date">Present</span>
+                            <h3>Senior DevOps / Cloud Engineer</h3>
+                            <p>Architecting Azure cloud platforms, managing Kubernetes clusters, building CI/CD pipelines, and leading data engineering initiatives. Driving automation and platform reliability across enterprise-scale systems.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-event reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <span class="event-date">Cloud & Data Focus</span>
+                            <h3>Cloud Infrastructure & Data Engineering</h3>
+                            <p>Specialized in Azure cloud migrations, Kafka-based streaming architectures, Hadoop ecosystem deployments, and cloud-native application modernization across complex enterprise environments.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-event reveal">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-card timeline-card">
+                            <span class="event-date">Academic Foundation</span>
+                            <h3>B.Sc. Electrical & Computer Engineering</h3>
+                            <p>Graduated with a Bachelor of Science in Electrical and Computer Engineering, building the technical foundation that underpins a career in cloud infrastructure and systems engineering.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI DASHBOARD -->
+        <section id="ai-dashboard" class="ai-section layout-panel">
+            <div class="section-container">
+                <h2 class="section-title reveal">Platform Observability</h2>
+                <p class="section-subtitle reveal">A live view of infrastructure telemetry and system health metrics.</p>
+                
+                <div class="dashboard-grid reveal">
+                    <div class="glass-card telemetry-card">
+                        <h3>Infrastructure Telemetry</h3>
+                        <div class="telemetry-stat-row">
+                            <span>CI/CD Pipeline Status</span>
+                            <span class="telemetry-value text-glow">PASSING</span>
+                        </div>
+                        <div class="telemetry-stat-row">
+                            <span>Cluster CPU Utilization</span>
+                            <span class="telemetry-value" id="cpuMetric">42.8%</span>
+                        </div>
+                        <div class="telemetry-stat-row">
+                            <span>Service Availability</span>
+                            <span class="telemetry-value" style="color: #34c759;">99.98%</span>
+                        </div>
+                        <div class="simulated-graph-container">
+                            <div class="graph-bar" style="--h: 60%"></div>
+                            <div class="graph-bar" style="--h: 85%"></div>
+                            <div class="graph-bar" style="--h: 40%"></div>
+                            <div class="graph-bar" style="--h: 95%"></div>
+                            <div class="graph-bar" style="--h: 70%"></div>
+                            <div class="graph-bar" style="--h: 55%"></div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card prompt-card">
+                        <h3>Kubernetes Health Check</h3>
+                        <div class="terminal-shell">
+                            <div class="shell-header">
+                                <span class="shell-dot red"></span>
+                                <span class="shell-dot yellow"></span>
+                                <span class="shell-dot green"></span>
+                                <span class="shell-title">cluster_health.py</span>
+                            </div>
+                            <div class="shell-body">
+                                <p class="code-line"><span class="c-keyword">import</span> kubernetes, prometheus_client</p>
+                                <p class="code-line"><span class="c-keyword">def</span> <span class="c-func">check_cluster_health</span>():</p>
+                                <p class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;nodes = k8s.list_node().items</p>
+                                <p class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="c-keyword">for</span> node <span class="c-keyword">in</span> nodes:</p>
+                                <p class="code-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return node.status.conditions</p>
+                                <p class="code-line"><span class="c-comment"># All nodes healthy. Uptime: 99.98%</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section layout-panel">
+            <div class="section-container">
+                <div class="glass-card contact-wrapper reveal">
+                    <div class="contact-info-panel">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Get In Touch</h2>
+                        <p>Open to cloud engineering roles, DevOps consulting, infrastructure architecture reviews, or technical collaborations. Let's build something reliable together.</p>
+                        
+                        <div class="network-channels">
+                            <a href="https://linkedin.com" target="_blank" class="channel-link">
+                                <span class="channel-icon">🔗</span> LinkedIn
+                            </a>
+                            <a href="https://github.com" target="_blank" class="channel-link">
+                                <span class="channel-icon">💻</span> GitHub
+                            </a>
+                            <a href="mailto:dereje@example.com" class="channel-link">
+                                <span class="channel-icon">✉️</span> Email
+                            </a>
+                            <a href="https://t.me" target="_blank" class="channel-link">
+                                <span class="channel-icon">✈️</span> Telegram
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-panel">
+                        <form id="liquidForm" onsubmit="event.preventDefault();">
+                            <div class="form-group">
+                                <input type="text" id="inputName" class="form-input" placeholder=" " required>
+                                <label for="inputName" class="form-label">Your Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="inputEmail" class="form-input" placeholder=" " required>
+                                <label for="inputEmail" class="form-label">Email Address</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="inputMessage" class="form-input form-textarea" placeholder=" " required></textarea>
+                                <label for="inputMessage" class="form-label">Message</label>
+                            </div>
+                            <button type="submit" class="btn-submit liquid-btn" id="submitBtn">
+                                <span>Send Message</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- TERMINAL DRAWER -->
+    <div class="developer-terminal-drawer" id="terminalDrawer">
+        <div class="terminal-drawer-header">
+            <span>Developer Shell</span>
+            <button id="closeTerminalBtn">&times;</button>
+        </div>
+        <div class="terminal-drawer-body" id="terminalOutput">
+            <p class="term-line primary-term">Initializing shell... Done.</p>
+            <p class="term-line">Connected as: DEREJE SICHALA</p>
+            <p class="term-line">Type 'help' for available commands.</p>
+            <div class="terminal-input-row">
+                <span class="term-prompt">dereje@cloud-platform:~$</span>
+                <input type="text" id="terminalInput" autofocus autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECT MODAL -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="glass-card modal-content">
+            <button class="modal-close-btn" id="modalClose">&times;</button>
+            <div id="modalDataContainer"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
